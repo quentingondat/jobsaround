@@ -10,9 +10,9 @@ const RouterComponent = () => {
       <Scene key='auth'>
         <Scene sceneStyle={{ paddingTop: 0 }} key='login' component={LoginForm} hideNavBar={true} initial={true}/>
       </Scene>
-      <Scene navigationBarStyle={{backgroundColor: '#1AA59A', borderColor: '#1AA59A'}} key='main'>
-        <Scene key='mainPage' component={JobList} />
-        <Scene key='jobDetail' component={JobDetail} />
+      <Scene navigationBarStyle={{backgroundColor: '#1AA59A', borderColor: '#1AA59A' }} titleStyle={{ color: 'white' }} barButtonIconStyle={{ tintColor: 'white' }} key='main'>
+        <Scene key='mainPage' title={Job List} component={JobList} />
+        <Scene key='jobDetail' title={Job Detail} component={JobDetail} />
       </Scene>
     </Router>
   )
