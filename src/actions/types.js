@@ -1,0 +1,10 @@
+export const LOGIN_CHANGED = 'login_changed'
+export const LOGIN_USER_SUCCESS = 'login_user_success'
+export const LOGIN_USER_FAIL = 'login_user_fail'
+export const LOGIN_USER = 'login_user'
+export const LOGIN_FOCUS = 'login_focus'
+export const LOGIN_BLUR = 'login_blur'
+
+export const JOBS_FETCH = 'jobs_fetch'
+export const JOBS_FETCH_SUCCESS = 'jobs_fetch_success'
+export const JOBS_GEO_REFRESH = 'jobs_geo_refresh'
