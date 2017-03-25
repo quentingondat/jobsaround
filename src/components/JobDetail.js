@@ -3,7 +3,7 @@ import { ScrollView, View, Text, TouchableWithoutFeedback, Image, TouchableOpaci
 import { Actions } from 'react-native-router-flux'
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'
 import { connect } from 'react-redux'
-import { ViewContainerSection } from './common'
+import { ViewContainerSection, FeatureList } from './common'
 
 class JobDetail extends Component {
   formatDate(date) {
@@ -11,7 +11,7 @@ class JobDetail extends Component {
     var curr_date = d.getDate()
     var curr_month = d.getMonth()
     var curr_year = d.getFullYear()
-    return curr_month + "/" + curr_date
+    return curr_month + "/" + curr_date + "/" + curr_year
   }
 
   render() {
@@ -36,27 +36,20 @@ class JobDetail extends Component {
           </MapView>
           <View>
             <View style={styles.headerContainer}>
-              <View>
-                <Text style={styles.titleStyle}>{ type.toUpperCase() }</Text>
-              </View>
-              <View>
-                <Text style={styles.headDateStyle}>{this.formatDate(start_date)} - {this.formatDate(end_date)}</Text>
-              </View>
-              <View>
-                <TouchableOpacity>
-                  <Text style={styles.titleStyle}>
-                    BOOK
-                  </Text>
-                </TouchableOpacity>
-              </View>
+              <TouchableOpacity>
+                <Text style={styles.titleStyle}>
+                  APPLY FOR THIS JOB
+                </Text>
+              </TouchableOpacity>
             </View>
             <View style={styles.bodyContainer}>
-              <Text style={styles.headTextStyle}>Job Description</Text>
-              <Text style={styles.bodyTextStyle}> { name } </Text>
-              <Text style={styles.bodyTextStyle}> { company } </Text>
-              <Text style={styles.bodyTextStyle}> { address } </Text>
-              <Text style={styles.bodyTextStyle}> { price }€ </Text>
-              <Text style={styles.bodyTextStyle}> { description } </Text>
+              <FeatureList label={'Name:'}>{ name }</FeatureList>
+              <FeatureList label={'Company:'}>{ company }</FeatureList>
+              <FeatureList label={'Address:'}>{ address }</FeatureList>
+              <FeatureList label={'Start:'}>{ this.formatDate(start_date) }</FeatureList>
+              <FeatureList label={'End:'}>{ this.formatDate(end_date) }</FeatureList>
+              <FeatureList label={'Price:'}>{ price } €</FeatureList>
+              <FeatureList label={'Description:'}>{ description }</FeatureList>
             </View>
           </View>
       </ScrollView>
@@ -66,10 +59,10 @@ class JobDetail extends Component {
 
 const styles = {
   headerContainer: {
-    backgroundColor: '#1AA59A',
+    backgroundColor: '#1B5A7A',
     padding: 10,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     alignItems: 'center'
   },
   bodyContainer: {

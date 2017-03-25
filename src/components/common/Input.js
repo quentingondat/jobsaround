@@ -20,7 +20,7 @@ class Input extends Component {
 
   onFocus() {
     this.setState({
-        borderColor: { borderColor: '#1AA59A' }
+        borderColor: { borderColor: '#1B5A7A' }
     })
     this.props.onFocus()
   }

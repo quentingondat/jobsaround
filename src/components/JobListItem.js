@@ -119,7 +119,7 @@ const styles = {
   priceStyle: {
     fontSize: 18,
     fontWeight: '700',
-    color: '#1AA59A'
+    color: '#1B5A7A'
   }
 }
 

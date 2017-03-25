@@ -107,7 +107,7 @@ const styles = {
     fontFamily: 'Lato',
     fontWeight: '600',
     fontSize: 45,
-    color: '#1AA59A'
+    color: '#1B5A7A'
   },
   subHeaderTextStyle: {
     fontFamily: 'Lato',
@@ -124,7 +124,7 @@ const styles = {
     fontFamily: 'Lato',
     fontWeight: '600',
     fontSize: 35,
-    color: '#1AA59A'
+    color: '#1B5A7A'
   },
   suscribeTextStyle: {
     fontFamily: 'Lato',
@@ -135,7 +135,7 @@ const styles = {
   suscribeButtonStyle: {
     fontFamily: 'Lato',
     fontWeight: '300',
-    color: '#4D7298',
+    color: '#1B5A7A',
     fontSize: 15
   },
   errorTextStyle: {
